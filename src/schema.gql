@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserDto {
+  username: String!
+  name: String!
+  lastname: String!
+  age: Int!
+}
+
+type Query {
+  users: [UserDto!]!
+  user(name: String!): UserDto!
+}
+
+type Mutation {
+  createUser(input: CreateUserDto!): UserDto!
+  loginUser(input: LoginUserDto!): UserDto!
+}
+
+input CreateUserDto {
+  username: String!
+  password: String!
+  name: String!
+  lastname: String!
+  age: Int!
+}
+
+input LoginUserDto {
+  username: String!
+  password: String!
+}
